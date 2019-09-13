@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-form @submit="onSubmit" @reset="onReset">
+    <b-form inline @submit="onSubmit" @reset="onReset" class="text-left">
       <b-form-group
         id="to-do-list-name-group"
         label="To Do List Name:"
@@ -11,10 +11,13 @@
           v-model="form.toDoListName"
           required
           placeholder="List Name"
+          class="m-1"
         ></b-form-input>
       </b-form-group>
-      <b-button type="submit" variant="primary">Save</b-button>
-      <b-button type="reset" variant="danger">Discard</b-button>
+      <b-form-group>
+        <b-button type="submit" variant="primary" class="m-1">Save</b-button>
+        <b-button type="reset" variant="danger" class="m-1">Discard</b-button>
+      </b-form-group>
     </b-form>
   </div>
 </template>
