@@ -20,7 +20,7 @@ export default {
     subtitle: String,
     description: String
   }
-};
+}
 </script>
 
 <style lang="scss">
