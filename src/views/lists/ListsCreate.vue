@@ -20,7 +20,11 @@
 </template>
 
 <script>
+import { mapActions } from "vuex"
+
 export default {
+  name: "list-create",
+
   data() {
     return {
       form: {
@@ -28,20 +32,21 @@ export default {
       }
     }
   },
-  methods: {
-    onSubmit(event) {
-      let currentListCount = this.$store.state.lists.lists.length
 
+  methods: {
+    ...mapActions("lists", ["save"]),
+
+    onSubmit(event) {
       event.preventDefault()
 
-      this.$store.dispatch("lists/save", {
-        id: currentListCount,
+      this.save({
         title: this.form.toDoListName,
         todos: []
       })
 
       this.$router.push("/lists")
     },
+
     onReset(event) {
       event.preventDefault()
       this.form.toDoListName = ""

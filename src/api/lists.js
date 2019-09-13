@@ -9,7 +9,6 @@ export default {
             url: "http://localhost:8080/api/v1/lists",
             onUploadProgress: (progressEvent) => {
                 console.log(progressEvent)
-                
             },
             onDownloadProgress: (progressEvent) => {
                 console.log(progressEvent)

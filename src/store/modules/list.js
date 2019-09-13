@@ -7,7 +7,7 @@ const state = {
 const getters = {
     getLists(context) {
         console.log("In getLists()")
-        return context.state.ists
+        return context.state.lists
     }
 }
 
